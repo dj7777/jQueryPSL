@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet"/>
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+        <script>
+            $(function(){
+              
+              
+               //$("p[class]").css("border","3px outset green");
+               //$("p[id=para3]").css("border","3px outset green");
+
+               //$("p[id^=par]").css("border","3px outset green");
+               //$("p[id$=ra3]").css("border","3px outset green");
+               //$("p[id*=ra]").css("border","3px outset green");
+               $("p[id^=par][lang*=en]").css("border","3px outset green");
+            });
+
+        </script>
+    </head>
+
+    <body>
+        <ul id="list1">
+            <li class="a">List item 1</li>
+            <li>List Item 2</li>
+            <li class="b">List Item 3</li>
+            <li class="b">List Item 4</li>
+        </ul>
+
+        <p class="a">This is paragraph 1!!</p>
+    
+        <p class="b" lang="en" id="parashs3">This is paragraph 2!!</p>
+        
+        <p></p>
+        <p id="para3" class="a">This is paragraph 3!!</p>
+        <p class="b">This is paragraph 4!!</p
+         <p></p>
+        <p>This is paragraph without class!!</p>
+
+        <div>
+            <button>Submit</button>
+        </div>
+        <div>
+         <button>Button 2</button>
+          <button>Button 3</button>
+          <span> Span 1</span>
+          <b>This is bold</b>
+          <span>Span 2</span>
+          <span>Span 3</span>
+        </div>
+        
+    </body>
+
+</html>

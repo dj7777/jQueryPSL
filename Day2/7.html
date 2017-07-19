@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <style>
+        #box1{
+            margin: 6px;width: 80px;height:80px;
+            position : absolute; left:20px;top:70px;
+            background: peachpuff;display: none;
+        }
+        #box2{
+            margin: 6px;width: 80px;height:80px;
+            position : absolute; left:60px;top:100px;
+            background: aqua;display: none;
+        }
+        p{
+            color: red;
+        }
+
+        </style>
+           <!--my own web browser -->
+    <!-- <script src="jquery-3.2.1.js">  </script> -->
+    
+     <!--CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+   <script> 
+        
+        $(function(){
+
+      //  $("ul").find("li.b").css("border","3px solid red");
+
+            var leftMargin = 0;
+            var border = 3;
+
+            $("p").each(function(){
+                $(this).css("border",border+"px solid red");
+                $(this).css("margin-left",leftMargin);
+                border+=2;
+                leftMargin+=10;
+            })
+        });
+        
+   </script>
+
+    </head>
+    <body>
+
+        <ul id="list3">
+            <li class="a">List item 1</li>
+            <li>List Item 2</li>
+            <li class="b">List Item 3</li>
+            <li class="b">List Item 4</li>
+        </ul>
+
+        <a href="https://www.google.com">Google.com</a>
+
+        <p class="a" id="para3">This is Paragraph 1</p>
+        <p class="a" id="para3">This is Paragraph 2</p>
+        <p class="a" id="para3">This is Paragraph 3</p>
+        <p class="a" id="para3">This is Paragraph 4</p>
+        <p class="a" id="para3">This is Paragraph 5</p>
+        <p class="a" id="para3">This is Paragraph 6</p>
+        <p class="a" id="para3">This is Paragraph 7</p>
+      
+    </body>
+</html>

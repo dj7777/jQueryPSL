@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+
+        <style>
+            #myDiv{
+                width:250px;
+                height:180px;
+                margin:10px;
+                padding:20px;
+                background: purple;
+            
+                font-size:x-large;
+                font-weight: bolder;
+                border: 5px solid yellow;
+                cursor: pointer;
+            }
+        </style>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+        <script>
+            $(function(){
+                $("#height").html($("#myDiv").height());
+
+                $("#width").html($("#myDiv").width());
+                $("#innerHeight").html($("#myDiv").innerHeight());
+                $("#innerWidth").html($("#myDiv").innerWidth());
+                $("#outerHeight").html($("#myDiv").outerHeight());
+                $("#outerWidth").html($("#myDiv").outerWidth());
+            });
+
+        </script>
+    </head>
+    <body>
+        <p>Using jQuery to compute element size and position</p>
+        <div id="myDiv"></div>
+
+        <div>
+            <span>Height: </span><span id="height"></span>
+        </div>
+
+        <div>
+            <span>Width: </span><span id="width"></span>
+        </div>
+        <div>
+            <span>InnerHeight: </span><span id="innerHeight"></span>
+        </div>
+
+        <div>
+            <span>InnerWidth: </span><span id="innerWidth"></span>
+        </div>
+        <div>
+            <span>OuterHeight: </span><span id="outerHeight"></span>
+        </div>
+        <div>
+            <span>outerWidth: </span><span id="outerWidth"></span>
+        </div>
+   
+    </body>
+
+
+</html>

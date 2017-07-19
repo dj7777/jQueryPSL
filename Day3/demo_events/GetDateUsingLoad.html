@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <style>
+                           
+        </style>
+   <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+   <script
+  
+   <script>
+   $(function(){
+   //AJAX Call
+   $("#btn").click(function(){
+       $("#stage").load("result.html",function(responseTxt,statusTxt,xhr){
+           if(statusTxt=="success")
+           {
+               alert("External Content loaded successfully");
+           }
+           else if(statusTxt=="error")
+           {
+               alert("Error: "+xhr.status+ ":"+xhr.statusTxt);
+           }
+       })
+   })
+
+   });
+   </script>
+    </head>
+    <body>
+    <div id="stage" style="background-color:aqua;font-size:x-large">
+        Load !!
+    </div>
+    <input tpe="button" id="btn" value="Load Data!">
+
+    </body>
+</html>

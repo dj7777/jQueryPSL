@@ -1,0 +1,58 @@
+<html>
+<head>
+<style>
+ #div1{
+			
+			background: purple;
+			color : white;
+			font-weight: bolder;
+			border: 5px solid yellow ;
+			
+			height: 200px;
+			width: 200px;
+	} 
+
+ #div2{
+			
+			background: red;
+			color : white;
+			font-weight: bolder;
+			border: 5px solid yellow ;
+			
+			height: 400px;
+			width: 300px;
+	} 
+</style>
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+   <script
+	src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>
+   <script src="jQuery.watermark.js"></script>
+<script>
+	
+	
+        $(function(){
+            $("#div1").draggable();
+           // $("div2").droppable();
+
+           $("#div2").droppable({
+             drop:  function(event,ui){
+                   $(this).find("p").html("Dropped").css('fontsize','xx-large');
+               }}
+           );
+        });
+
+
+
+</script>
+
+</head>
+<body>
+   
+   
+   <div id="div1">Draggable div</div>
+   <div id="div2">Droppable div</div>
+  
+  
+</body>
+</html>

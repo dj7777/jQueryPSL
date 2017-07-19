@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <style>
+        #box1{
+            margin: 6px;width: 80px;height:80px;
+            position : absolute; left:20px;top:70px;
+            background: peachpuff;display: none;
+        }
+        #box2{
+            margin: 6px;width: 80px;height:80px;
+            position : absolute; left:60px;top:100px;
+            background: aqua;display: none;
+        }
+        p{
+            color: red;
+        }
+
+        </style>
+           <!--my own web browser -->
+    <!-- <script src="jquery-3.2.1.js">  </script> -->
+    
+     <!--CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+   <script> 
+        
+        $(function(){
+/*
+                $("#btn1").click(function(){
+                    $("div").data("greeting","Hello jQuery!");
+                    $("div").text($("div").data("greeting"));
+                });
+
+                 $("#btn2").click(function(){
+                    alert($("div").data("greeting"));
+                    $("div").text("");
+                });
+            */
+
+           /* var str="                         string has lots of spaces before and after         ";
+            $("#original").html("original String: "+str);
+            $("#trimmed").html("$.trim()'ed"+ $.trim(str)+"' ");
+            */
+
+           /* $("#btn4").click(function(){
+                var elems = document.getElementsByTagName("h1");
+                var arr = jQuery.makeArray(elems);
+                arr.reverse();
+                $(arr).appendTo(document.body);
+            });
+            
+            */
+
+            var noarr = [10,20,30];
+
+            function Person(){
+                this.Id = 100,
+                this.Name = "Sachin",
+                this.City = "Pune"
+            }
+
+            var p= new Person();
+            // with Array
+            /*$.each(noarr,function(index,value){
+                alert(index+':'+ value);
+            });
+            */
+
+            // with the object
+            /*$.each(p,function(index,value){
+                alert(index+':'+ value);
+            });
+            */
+
+            alert($.isNumeric(Infinity));
+        });
+        
+   </script>
+
+    </head>
+    <body>
+        <p></p>
+        <button id="btn1">Attach some data!!</button></br>
+        <button id="btn2">Get Attached data!!</button></br>
+
+        <div style="height:250px;width:250px;background-color:gray;font-size:x-large" ></div>
+
+        <!-- trim()  -->
+        <pre id="original"></pre>
+        <pre id="trimmed"></pre>
+
+        <button id="btn3">Click!!</button>
+        <div id="div1"></div>
+        </br>
+        <div id="div2"></div>
+        </br>
+        
+
+        <button id="btn4">Make Array and reverse</button></br>
+
+        <h1>First</h1>
+        <h1>Second</h1>
+        <h1>Third</h1>
+        <h1>Fourth</h1>
+        
+
+      
+    </body>
+</html>

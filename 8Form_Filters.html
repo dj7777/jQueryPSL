@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet"/>
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+        <script>
+            $(function(){
+              //$("form :input").css("border","3px solid red");
+              //$("form :text").css("border","3px solid red");
+           
+             // $("form :text:enabled").css("border","3px solid red");
+               //$("form :checked").before("CHECKED!!");
+               $("form :checkbox:checked").before("CHECKED!!");
+     });
+
+        </script>
+    </head>
+
+    <body>
+        <form>
+         <label>First Name</label>
+        <input type ="text"/></br>
+        </div>
+        <label>Lat Name</label>
+        <input type ="text"/></br>
+        
+        <label>Disabled Element</label>
+        <input type ="text" disabled/></br>
+
+        <label>Gender</label>
+        <input type="radio" checked >Male</input>
+         <input type="radio">Female</input>
+         </br>
+
+         <label>What Products are you interested in?</label>
+          <input type="checkbox" checked>ABC</input>
+          <input type="checkbox" >XYZ</input>
+          <input type="checkbox" checked>PQR</input>
+          <input type="checkbox" >ABCXYZ</input>
+          </br></br>
+           <label>Comments</label>
+        
+        <textarea row="40" ></textarea>
+        </form>
+    </body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet"/>
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+        <script>
+            $(function(){
+              
+              // Filters- Basic Filters, Attribute Filters, content Filters
+              // Child Filters, visibility filters, form filters
+
+              // $("p:contains(3)").css("border","3px outset green");
+              //$("*:contains(3)").css("border","3px outset green");
+              //$("p:empty").css("border","3px outset green");
+               
+               //select p those have atleast 1 child node(either an element or text).
+               //$("p:parent").css("border","3px outset green");
+
+               $("ul:has(li[class])").css("border","3px outset green");
+
+            });
+
+        </script>
+    </head>
+
+    <body>
+        <ul id="list1">
+            <li class="a">List item 1</li>
+            <li>List Item 2</li>
+            <li class="b">List Item 3</li>
+            <li class="b">List Item 4</li>
+        </ul>
+
+        <p class="a">This is paragraph 1!!</p>
+        
+        <p class="b">This is paragraph 2!!</p>
+        
+        <p id="para3" class="a">This is paragraph 3!!</p>
+        <p></p>
+        <p class="b">This is paragraph 4!!</p>
+
+        <div>
+            <button>Submit</button>
+        </div>
+        <div>
+         <button>Button 2</button>
+          <button>Button 3</button>
+          <span> Span 1</span>
+          <b>This is bold</b>
+          <span>Span 2</span>
+          <span>Span 3</span>
+        </div>
+        
+    </body>
+
+</html>

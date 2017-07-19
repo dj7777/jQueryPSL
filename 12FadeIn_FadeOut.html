@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+
+        <link href="style.css" rel="stylesheet"/>
+        <style>
+            div{
+                width: 250px;
+                height: 190px;
+                background-color: yellow;
+                color: white;
+            }
+        </style>
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+        <script>
+            $(function(){
+             
+                /*
+                    Effects-
+                    1. Hide and Show
+                    2.SlideUp and SlideDown
+                    3. FadeIn and FadeOut
+
+                */
+
+                $("#fadeIn").click(function(){
+                    $('#mydiv').fadeIn(7000, function(){   // second parameter ia optional.... It will execute after hide method is completed
+                        alert("Hide effect is completed");  
+                    });   
+                    // normal, fast, slow, very fast, very slow
+                });
+                
+                $("#fadeOut").click(function(){
+                    $('#mydiv').fadeOut(7000);
+                });
+
+                $("#toggle").click(function(){
+                    $('#mydiv').fadeToggle(7000);
+                });
+            });
+
+        </script>
+    </head>
+
+    <body>
+      <button id="fadeIn">Fade In!</button>
+      <button id="fadeOut">Fade Out!</button>
+      <button id="toggle">Toggle!</button>
+
+      <div id="mydiv">
+          This is myDiv!!
+      </div>
+
+    </body>
+
+</html>

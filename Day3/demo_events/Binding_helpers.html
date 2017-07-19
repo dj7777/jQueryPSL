@@ -1,0 +1,58 @@
+ <html>
+    <head>
+        <style>
+           .normal{
+               background-color: yellow;
+               color: white;
+               font-size: xx-large;
+               font-family: 'Times New Roman';
+               margin: 5px;
+               width: 300px;
+               height: 200px;
+           }
+         .highlighted{
+             background-color:maroon;
+         }
+        </style>
+   <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+  
+   <script>
+   $(function(){
+
+       //1.
+    //    $("#evtTarget").bind("mouseover",highlighted);
+    //    $("#evtTarget").bind("mouseleave",highlighted);
+
+    //2
+  /*   $("#evtTarget").bind("mouseover mouseleave",highlighted);
+
+     $("#evtTarget").bind("click",function(){
+        //  $("#evtTarget").unbind("mouseover",highlighted);
+        //  $("#evtTarget").unbind("mouseleave",highlighted);
+        $("#evtTarget").unbind("mouseover mouseleave",highlighted);
+        $("#evtTarget").html("<p>events are removed</p>");
+     });
+
+*/
+       $("#evtTarget").hover(highlight,highlight);
+        $("#evtTarget").click(function(){
+          $("#evtTarget").unbind("mousenter mouseleave",highlight);
+          $("#evtTarget").html("<p>events are removed</p>");
+        })
+       function highlight(){
+           $("#evtTarget").toggleClass("highlighted");
+       }
+
+
+  
+   });
+   </script>
+    </head>
+    <body>
+     <div id="evtTarget" class="normal">
+         Mouse over the div to see some effect !
+         Click on it to Stop the effect
+     </div>
+
+    </body>
+</html>

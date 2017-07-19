@@ -1,0 +1,51 @@
+ <html>
+    <head>
+        <style>
+           .normal{
+               background-color: yellow;
+               color: white;
+               font-size: xx-large;
+               font-family: 'Times New Roman';
+               margin: 5px;
+               width: 300px;
+               height: 200px;
+           }
+         .highlighted{
+             background-color:maroon;
+         }
+        </style>
+   <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+  
+   <script>
+   $(function(){
+       
+       $("span").click(function(event){
+           event.stopPropagation();
+           alert("Span is Clicked");
+       });
+
+       $("p").click(function(event){
+           alert("Para is Clicked");
+       });
+       $("div").click(function(event){
+           alert("div is Clicked");
+       });
+
+       
+  
+   });
+   </script>
+    </head>
+    <body>
+     <div>Div 1</div>
+     <div>Div 2</div>
+     <div>Div 3</div>
+     <div>Div 4</div>
+     <div>Div 5</div>
+     <div>Div 6</div>
+
+     <p>Para</p></br>
+     <span>Span</span>
+
+    </body>
+</html>

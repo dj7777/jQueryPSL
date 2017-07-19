@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <style>
+        img{
+            height:150px;
+            width:150px;
+            position: relative;  /*Required to move the element*/
+        }
+
+        </style>
+           <!--my own web browser -->
+    <!-- <script src="jquery-3.2.1.js">  </script> -->
+    
+     <!--CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+   <script> 
+        
+        $(function(){
+                //start the animation
+                $(".start-btn").click(function(){
+                    $("img").animate({left:"+=150"},2000);
+                })
+
+                //stop() stops the currently running animation
+                $(".stop-btn").click(function(){
+                    $("img").stop();   
+                })
+        });
+        
+   </script>
+
+    </head>
+    <body>
+        <button class="start-btn">Start</button>
+        <button class="stop-btn">Stop</button>
+        <button class="back-btn">Back</button>
+        <button class="reset-btn">Reset</button>
+        
+    <p>    
+        <img src = "../Day1/Koala.jpg">
+    </p>
+    </body>
+</html>

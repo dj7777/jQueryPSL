@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <style>
+        #box1{
+            margin: 6px;width: 80px;height:80px;
+            position : absolute; left:20px;top:70px;
+            background: peachpuff;display: none;
+        }
+        #box2{
+            margin: 6px;width: 80px;height:80px;
+            position : absolute; left:60px;top:100px;
+            background: aqua;display: none;
+        }
+        p{
+            color: red;
+        }
+
+        </style>
+           <!--my own web browser -->
+    <!-- <script src="jquery-3.2.1.js">  </script> -->
+    
+     <!--CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+   <script> 
+        
+        $(function(){
+
+            //1. jQuery text() method
+             //alert($('#list3').text());
+          //  $("#para3").text("This is text from text() method"); // setting text from DOM element
+
+            //2. jQuery html() method
+            // alert()($("para3).html());
+
+            //var newpara ="<p>This is a new para</p>";
+            //$("#para3").html(newpara);
+
+            //3. jQuery append method is used to insert the contents at the end of selected element
+
+            //$("p").append(" with some dynamic text");
+            //$("p:last").appendTo("p:first");
+
+            //4. jQuery Prepend method
+            // $("p").prepend("prepend Text");
+
+            //5. jQuery Attributes attr() method
+            //
+            //$(alert($("p").attr());
+
+            //$("a").attr("target","_blank");
+            //$("a").removeAttr("href");
+
+            //6. jQuery wrap() method is used to wrap an html structure around the selected element5
+            //$("p").
+
+            //7. jQuery empty() method.
+
+        });
+        
+   </script>
+
+    </head>
+    <body>
+
+        <ul id="list3">
+            <li class="a">List item 1</li>
+            <li>List Item 2</li>
+            <li class="b">List Item 3</li>
+            <li class="b">List Item 4</li>
+        </ul>
+
+        <a href="https://www.google.com">Google.com</a>
+
+        <p class="a" id="para3"></p>
+    </body>
+</html>

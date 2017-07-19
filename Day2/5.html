@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+        <style>
+            .main{
+                width:250px;
+                height:180px;
+                margin:10px;
+                padding:20px;
+                background: purple;
+                color:white;
+                font-size:x-large;
+                font-weight: bolder;
+                border: 5px solid yellow;
+                cursor: pointer;
+            }
+        </style>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+        <script>
+            $(function(){
+                // addClass() method
+                //$("div").addClass("main");
+
+              //  $("div").removeClass("main");
+              $("button").click(function(){
+                  $("div").toggleClass("main");
+              });
+            });
+
+        </script>
+
+    <body>
+        <div class="main">Have a nice day!!</div>
+        <div>Hello!!</div>
+
+        <button>Click Me!!</button>
+    </body>
+
+
+</html>

@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <style>
+            div{
+                background-color: yellow;
+                color:white;
+                font-size: xx-large;
+                font-family: 'Times New Roman', Times, serif;
+                margin: 5px;
+            }
+
+            #members li{
+                border: 3px solid black;
+                margin: 5px;
+                width: 300px;
+                text-align: center;
+
+            }
+
+            .highlight{
+                background-color: blue;
+            }
+
+        </style>
+           <!--my own web browser -->
+    <!-- <script src="jquery-3.2.1.js">  </script> -->
+    
+     <!--CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<!--   <script
+  src="http://code.jquery.com/jquery-1.4.2.min.js"
+  integrity="sha256-4joqTi18K0Hrzdj/wGed9xQOt/UuHuur+CeogYJkPFk="
+  crossorigin="anonymous"></script>
+-->   <script> 
+        
+        $(function(){
+
+            //1 bind(): It doesn't works for elements that added dynamically that matches the same selectors.
+          /*  $("div").bind("click",function(){
+                alert("div is clicked");
+            });
+*/
+            //2. live  JqUERY 1.4 to 1.8
+            /*
+                The .live() will work with dynamically added elements chaining is not properly supported 
+                This can affect the performance if DOM is deep.
+            */
+       /*     $("div").live("click",function(){
+                alert("div is clicked");
+            });
+
+            */
+          
+            //3. delegate()
+            /*
+                You have the option of chosing where to attach the selector/event info chaining is also properly supported. 
+                // deprecated after jQuery 1.7
+            */
+           /* $(document).delegate("div","click",function(){
+                alert("div is clicked");
+            })
+
+             $("#members").delegate("li","click",function(){
+                alert($(this).text()+" is clicked");
+            })
+
+            */
+              
+              //4. on()
+              /*
+                Brings unoformity to the various event binding methods. 
+              */
+            /*  $("#members").on("click","li",clicked)
+                    .on("mouseenter",enter)
+                    .on("mouseleave",leave);
+
+                function clicked(){
+                     alert("Clicked "+ $(this).text());
+                    //$("btnAdd").off("click");  // REMOVE AN EVENT HANDLER
+
+                    $("#members").off("click","li");
+                }
+
+                function enter(){
+                    // method chaining
+                    $(this).css("background-color","red").css("color","white");
+                }
+
+                function leave(){
+                    $(this).css("background-color","blue").css("color","white");
+                }
+              
+              $("#btnAdd").click(function(){
+                $("body").append("<div>Dynamically added Div</div>");
+            })
+        */
+
+            $("#evtTarget").bind("mouseover mouseleave", highlight);
+
+             $("#evtTarget").bind("click",function(){
+                 $("#evtTarget").unbind("mouseover mouseleave", highlight);
+             });
+
+            function highlight(){
+                $("#evtTarget").toggleClass("highlighted");
+            }
+
+        });
+        
+   </script>
+
+    </head>
+    <body>
+        <ul id="members">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ul>
+
+        <div>Statically added Div!!</div>
+        <button id="btnAdd">Add Div</button>
+
+         <div>This is second Div inside body!!</div>
+
+         <div id="evtTarget" class="normal">This is div</div>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+
+        <link href="style.css" rel="stylesheet"/>
+        <style>
+            div{
+                width: 250px;
+                height: 190px;
+                background-color: yellow;
+                color: white;
+            }
+            img{
+                position: relative;
+            }
+        </style>
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+        <script>
+            $(function(){
+                $("button").click(function(){
+                    $("img").animate({
+                        left:500
+                    });
+                });
+             });
+
+        </script>
+    </head>
+
+    <body>
+      <button>Start Animation</button>
+
+      <p>
+        <img src="images/Desert.jpg" height="250px" width="250px"/>
+      </p>
+    </body>
+
+</html>

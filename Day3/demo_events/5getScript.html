@@ -1,0 +1,51 @@
+<html>
+<head>
+<style>
+ .block{
+			margin:10px;
+			padding: 20px;
+			background: purple;
+			color : white;
+			font-weight: bolder;
+			border: 5px solid yellow ;
+			cursor: pointer;
+			height: 400px;
+			width: 300px;
+	} 
+
+</style>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script>
+	$(function() {
+	
+    var url="http://code.jquery.com/jquery.color.js"
+    $("#go").click(function(){
+        $(".block").animate({
+                backgroundColor:"rgb(225,180,180)"
+        },1000)
+        .delay(500)
+        .animate({
+             backgroundColor:"olive"
+        })
+        .delay(500)
+        .animate({
+             backgroundColor    :"#00f"
+        })
+    })
+
+
+	});
+</script>
+
+</head>
+<body>
+   
+   <button id="go">Run</button>
+   <div class="block"></div>
+  
+  
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <style>
+                           
+        </style>
+   <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+   <script
+  
+   <script>
+   $(function(){
+   //AJAX Call
+   $("#btn").click(function(){
+       $.ajax({
+           url:"player.txt",
+           type:"GET",
+           sucess:function(result)
+           {
+               $("#stage").text(result);
+           },
+           error:function(xhr){
+               $("#stage").text(xhr.status+" "+xhr.statusText);
+           }
+       })
+           
+    });
+   
+
+   });
+   </script>
+    </head>
+    <body>
+    <div id="stage" style="background-color:aqua;font-size:x-large">
+        Load !!
+    </div>
+    <button tpe="button" id="btn" value="Load Data!">Load</button>
+
+    </body>
+</html>
